@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
 <body>
-    <section>
-        <header>
+    <section class="memopad">
+        <header class="memopad-header">
             <form>
-                <input type="text" placeholder="write your todo">
-                <button type="submit">
+                <input class="memopad-input" type="text" placeholder="write your todo">
+                <button class="memopad-input__button" type="submit">
                     <i class="fi fi-rr-add"></i>
                 </button>
             </form>
         </header>
-        <article>
-            <div class="buttons">
-                <button>Today</button>
-                <button>completed</button>
-                <button>remainder</button>
-                <button>Clear All</button>
+        <article class="memopad-page">
+            <div class="page-buttons">
+                <button type="button" class="button-today">Today</button>
+                <button type="button" class="button-complete">completed</button>
+                <button type="button" class="button-remainder">remainder</button>
+                <button type="button" class="button-clear">Clear All</button>
             </div>
-            <ol>
-                <li>
+            <ol class="page-lists">
+                <li class="page-list">
                     <button type="submit">
                         <i class="fi fi-br-check"></i>
                     </button>
@@ -35,7 +35,7 @@
                         JS fetch 복습하기 
                     </strong>
                 </li>
-                <li>
+                <li class="page-list">
                     <button type="submit">
                         <i class="fi fi-br-check"></i>
                     </button>
@@ -43,7 +43,7 @@
                         JS 메모장 어플 HTML, CSS작업하기
                     </strong>
                 </li>
-                <li>
+                <li class="page-list">
                     <button type="submit">
                         <i class="fi fi-br-check"></i>
                     </button>
