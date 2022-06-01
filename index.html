@@ -5,31 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write your Memo</title>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="stylesheet" href="/src/style/reset.css">
     <link rel="stylesheet" href="./src/style/style.css">
+    <script src="https://kit.fontawesome.com/8f83d1908a.js" crossorigin="anonymous"></script>
+    <script src="./src/js/main.js"></script>
 </head>
 <body>
     <section class="memopad">
+        <h1 class="ir_text">메모 패드</h1>
         <header class="memopad-header">
             <form>
-                <input class="memopad-input" type="text" placeholder="write your todo">
-                <button class="memopad-input__button" type="submit">
-                    <i class="fi fi-rr-add"></i>
-                </button>
+                <input class="memopad-input" type="text" placeholder="write your todo and press Enter">
             </form>
         </header>
         <article class="memopad-page">
+            <h2 class="ir_text">메모 패드 작성하는 곳</h2>
             <div class="page-buttons">
-                <button type="button" class="button-today">Today</button>
-                <button type="button" class="button-complete">completed</button>
-                <button type="button" class="button-remainder">remainder</button>
-                <button type="button" class="button-clear">Clear All</button>
+                <button type="button" class="page-button today">Today</button>
+                <button type="button" class="page-button complete">completed</button>
+                <button type="button" class="page-button remainder">remainder</button>
+                <button type="button" class="page-button clear">Clear All</button>
             </div>
             <ol class="page-lists">
                 <li class="page-list">
                     <button type="submit">
-                        <i class="fi fi-br-check"></i>
+                        <i class="fa-solid fa-check"></i>
                     </button>
                     <strong>
                         JS fetch 복습하기 
@@ -37,7 +37,7 @@
                 </li>
                 <li class="page-list">
                     <button type="submit">
-                        <i class="fi fi-br-check"></i>
+                        <i class="fa-solid fa-check"></i>
                     </button>
                     <strong>
                         JS 메모장 어플 HTML, CSS작업하기
@@ -45,7 +45,7 @@
                 </li>
                 <li class="page-list">
                     <button type="submit">
-                        <i class="fi fi-br-check"></i>
+                        <i class="fa-solid fa-check"></i>
                     </button>
                     <strong>
                         JS 메모장 어플 JS 작업하기 
@@ -53,7 +53,6 @@
                 </li>
             </ol>
         </article>
-        Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
     </section>
 </body>
 </html>
