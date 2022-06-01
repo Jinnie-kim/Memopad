@@ -24,7 +24,7 @@ body {
 }
 
 
-.memopad-input {
+.memopad-input input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -33,7 +33,7 @@ body {
     color: #ffffff;
 }
 
-.memopad-input::placeholder {
+.memopad-input input::placeholder {
     color: #ffffff;
 }
 
