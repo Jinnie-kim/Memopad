@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.memopad {
+    width: 800px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffe8e8;
+}
+
+.memopad-header {
+    margin-bottom: 15px;
+}
+
+.memopad-header form {
+    display: flex;
+}
+
+
+.memopad-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #a1c3d1;
+    color: #ffffff;
+}
+
+.memopad-input::placeholder {
+    color: #ffffff;
+}
+
+.memopad-page {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #a1c3d1;
+    border-radius: 10px;
+}
+
+.memopad-page .page-buttons {
+    margin-bottom: 20px;
+}
+
+.page-buttons .page-button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #ffe8e8;
+    font-weight: 500;
+    color: #c91859;
+}
+
+.page-buttons .page-button+.page-button {
+    margin-left: 20px;
+}
+
+
+.memopad-page .page-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.memopad-page .page-lists::-webkit-scrollbar {
+    display: none;
+}
+
+.page-lists .page-list {
+    width: 100px;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #ffe8e8;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.page-lists .page-list strong {
+    display: block;
+}
