@@ -11,6 +11,7 @@ function paintMemo(newMemo) {
     const memoListContent = document.createElement('strong');
     memoList.setAttribute('class', 'page-list');
     memoListButton.setAttribute('type', 'button');
+    memoListButton.addEventListener('click', deleteMemo);
     memoListButtonIcon.setAttribute('class','fa-solid fa-check');
     memoListContent.innerText = newMemo;
     memoListButton.appendChild(memoListButtonIcon);
@@ -19,6 +20,10 @@ function paintMemo(newMemo) {
     memoListPage.appendChild(memoList);
 }
 
+function deleteMemo(event) {
+    const memoListNode = event.target.parentElement.parentElement;
+    memoListNode.remove();
+}
 function handleMemoSubmit(event) {
     event.preventDefault();
     // input의 value를 새로운 변수에 복사 
