@@ -1,8 +1,10 @@
 'use strict';
 
 const memoInputForm = document.querySelector('.memopad-input');
-let memoInput = memoInputForm.querySelector('input');
+const memoInput = memoInputForm.querySelector('input');
 const memoListPage = document.querySelector('.page-lists');
+const memos = [];
+
 
 function paintMemo(newMemo) {
     const memoList = document.createElement('li');
@@ -24,12 +26,19 @@ function deleteMemo(event) {
     const memoListNode = event.target.parentElement.parentElement;
     memoListNode.remove();
 }
+
+function saveMemos() {
+    localStorage.setItem('memos', JSON.stringify(memos));
+}
+
 function handleMemoSubmit(event) {
     event.preventDefault();
     // input의 value를 새로운 변수에 복사 
     const newMemo = memoInput.value;
     memoInput.value = '';
+    memos.push(newMemo);
     paintMemo(newMemo);
+    saveMemos();
 }
 
 memoInputForm.addEventListener('submit', handleMemoSubmit);
