@@ -9,6 +9,7 @@ const MEOMS_KEY = 'memos';
 
 function paintMemo(newMemo) {
     const memoList = document.createElement('li');
+    memoList.id = newMemo.id;
     const memoListButton = document.createElement('button');
     const memoListButtonIcon = document.createElement('i');
     const memoListContent = document.createElement('strong');
@@ -16,7 +17,7 @@ function paintMemo(newMemo) {
     memoListButton.setAttribute('type', 'button');
     memoListButton.addEventListener('click', deleteMemo);
     memoListButtonIcon.setAttribute('class','fa-solid fa-check');
-    memoListContent.innerText = newMemo;
+    memoListContent.innerText = newMemo.text;
     memoListButton.appendChild(memoListButtonIcon);
     memoList.appendChild(memoListButton);
     memoList.appendChild(memoListContent);
@@ -25,6 +26,7 @@ function paintMemo(newMemo) {
 
 function deleteMemo(event) {
     const memoListNode = event.target.parentElement.parentElement;
+    console.log(memoListNode.id);
     memoListNode.remove();
 }
 
@@ -37,8 +39,13 @@ function handleMemoSubmit(event) {
     // input의 value를 새로운 변수에 복사 
     const newMemo = memoInput.value;
     memoInput.value = '';
-    memos.push(newMemo);
-    paintMemo(newMemo);
+    // Memo에 오브젝트를 저장한다.
+    const newMemoObj = {
+        text: newMemo,
+        id: Date.now(),
+    }
+    memos.push(newMemoObj);
+    paintMemo(newMemoObj);
     saveMemos();
 }
 
