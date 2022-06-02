@@ -4,7 +4,7 @@ const memoInputForm = document.querySelector('.memopad-input');
 const memoInput = memoInputForm.querySelector('input');
 const memoListPage = document.querySelector('.page-lists');
 const memos = [];
-
+const MEOMS_KEY = 'memos';
 
 function paintMemo(newMemo) {
     const memoList = document.createElement('li');
@@ -43,3 +43,14 @@ function handleMemoSubmit(event) {
 
 memoInputForm.addEventListener('submit', handleMemoSubmit);
 
+function sayHello(item) {
+    console.log(`this is the turn of ${item}`);
+}
+
+
+const savedMemos = localStorage.getItem(MEOMS_KEY);
+
+if(savedMemos !== null) {
+    const parsedMemos = JSON.parse(savedMemos);
+    parsedMemos.forEach(item => sayHello(item));
+}
